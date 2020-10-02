@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.example.sqllitedatabasedemo.Activity.Product;
@@ -39,7 +41,7 @@ public class ProductAdapter extends ArrayAdapter {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View row=convertView;
         ProductHolder productHolder;
         if (row==null)
@@ -47,10 +49,10 @@ public class ProductAdapter extends ArrayAdapter {
             LayoutInflater layoutInflater=(LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row=layoutInflater.inflate(R.layout.display_product_row,parent,false);
             productHolder=new ProductHolder();
-            productHolder.tx_id=row.findViewById(R.id.p_id);
-            productHolder.tx_price=row.findViewById(R.id.p_price);
-            productHolder.tx_name=row.findViewById(R.id.p_name);
-            productHolder.tx_qty=row.findViewById(R.id.p_qty);
+            productHolder.tx_id=row.findViewById(R.id.t_id);
+            productHolder.tx_price=row.findViewById(R.id.t_name);
+            productHolder.tx_name=row.findViewById(R.id.t_price);
+            productHolder.tx_qty=row.findViewById(R.id.t_qty);
 
             row.setTag(productHolder);
         }
@@ -63,6 +65,7 @@ public class ProductAdapter extends ArrayAdapter {
         productHolder.tx_name.setText(product.getName());
         productHolder.tx_price.setText(Integer.toString(product.getPrice()));
         productHolder.tx_qty.setText(Integer.toString(product.getQty()));
+
 
 
         return row;

@@ -45,8 +45,6 @@
                     android:textSize="16dp"
                     android:id="@+id/title"
                     android:textColor="#fff"
-
-
                     android:layout_marginLeft="10dp"
                     android:text=""/>
 

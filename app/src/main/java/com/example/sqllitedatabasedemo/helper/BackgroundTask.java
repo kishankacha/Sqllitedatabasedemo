@@ -28,7 +28,7 @@ public class BackgroundTask extends AsyncTask<String,Product,String> {
     @Override
     protected String doInBackground(String... params) {
         String method=params[0];
-        Dboperation dboperation=new Dboperation(ctx);
+        DatabaseOperations dboperation=new DatabaseOperations(ctx);
         if (method.equals("add_info"))
         {
             String id=params[1];

@@ -5,11 +5,16 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    android:background="#2787A4">
+    android:paddingBottom="16dp">
+
+    <include layout="@layout/general_toolbar"
+        android:id="@+id/toolbar"/>
+
 
     <ListView
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/display_listiew"/>
 </RelativeLayout>

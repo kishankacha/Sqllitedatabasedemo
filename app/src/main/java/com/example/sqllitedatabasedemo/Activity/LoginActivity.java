@@ -22,6 +22,7 @@ public class LoginActivity  extends AppCompatActivity {
     String username,userpass;
     Button login;
     Context CTX=this;
+    TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,10 @@ public class LoginActivity  extends AppCompatActivity {
         register=findViewById(R.id.register);
         USERNAME=findViewById(R.id.USERNAME);
         USERPASSWORD=findViewById(R.id.USERPASSWORD);
+        title=findViewById(R.id.title);
         login=findViewById(R.id.login);
 
+        title.setText("Login");
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,12 +82,12 @@ public class LoginActivity  extends AppCompatActivity {
                             startActivity(intent);
                             finish();
                         }
-                        finish();
+                        //finish();
                     }
                     else
                     {
                         Toast.makeText(getBaseContext(), "Login failed ", Toast.LENGTH_SHORT).show();
-                        finish();
+                        //finish();
                     }
 
             }

@@ -46,8 +46,7 @@ public class Dboperation extends SQLiteOpenHelper {
         String[] projections={ProductContract.ProductEntry.ID,ProductContract.ProductEntry.NAME, ProductContract.ProductEntry.PRICE,
         ProductContract.ProductEntry.QTY};
 
-        Cursor cursor=db.query(ProductContract.ProductEntry.TABLE_NAME,projections,
-                null,null,null,null,null);
+        Cursor cursor=db.query(ProductContract.ProductEntry.TABLE_NAME,projections, null,null,null,null,null);
         return  cursor;
     }
 

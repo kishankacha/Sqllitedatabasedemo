@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class RegisteruserActivity extends AppCompatActivity {
     Button register;
     String user_name,user_pass,confo_pass;
     Context ctx=this;
+    TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,9 @@ public class RegisteruserActivity extends AppCompatActivity {
         USER_PASS=findViewById(R.id.user_pass);
         register=findViewById(R.id.register);
         CONFO_PASS=findViewById(R.id.confo_pass);
+        title=findViewById(R.id.title);
+
+        title.setText("Register");
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

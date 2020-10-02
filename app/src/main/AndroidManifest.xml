@@ -23,6 +23,8 @@
         <activity android:name=".Activity.AddProductActivity"/>
         <activity android:name=".Activity.ViewAllProductAdminActivity"/>
         <activity android:name=".Activity.DisplayProductActivity"/>
+        <activity android:name=".Activity.DeleteProductActivity"/>
+        <activity android:name=".Activity.UpdateProductActivity"/>
 
     </application>
 
